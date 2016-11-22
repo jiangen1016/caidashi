@@ -1,0 +1,26 @@
+#store_main .auto{width:1200px;height:805px;background:#fff;margin-top:38px;border-radius:10px;}
+#store_main .city{height:129px;border-bottom:1px dashed #000; }
+#store_main .city .citytop{line-height:35px;height:35px;padding-top:20px;margin-bottom:8px;}
+#store_main .city .left{margin-left:90px;}
+#store_main .city .citytop a{color:#c30d23;margin-left:18px;text-decoration: underline}
+#store_main .city .cityform{float:left;line-height:35px;height:35px;}
+#store_main .city .cityform input{border:none;}
+#store_main .city .cityform .text{width:280px;padding:0px 20px;height:33px;line-height:33px;border-radius:7px;border:1px solid #000;}
+#store_main .city span{font-weight:bolder;font-size:20px;}
+#store_main .cityform .submit{display:block;width:120px;height:35px;background:#c30d23;text-align:center;line-height:35px;color:#fff;border-radius: 7px;float:right;margin-left:18px;}
+#store_main .storelist .list{border:2px solid #c30d23;height:561px;border-radius:11px;}
+#store_main .storelist .list .item{padding:30px;border-bottom:1px solid #9f9f9f;}
+#store_main .storelist .list .item img{float:left;}
+#store_main .storelist .list .item .text{float:left;margin-left:18px;}
+#store_main .storelist .list .item .text p{height:24px;line-height:24px;}
+#store_main .storelist .list .item .text a{height:25px;line-height:25px;text-align:center;border:1px solid #c30d23;display:block;margin:24px 0px 0px 39px;}
+#store_main .storelist{margin-right:34px;}
+#store_main .mapmenu{padding:0px 43px;margin-top:14px;}
+#store_main .mapmenu p{line-height:62px;height:62px;}
+#store_main .mapmenu .storelist{float:left;width:307px;height:100%;}
+#store_main .mapmenu .map{float:left;}
+#store_main .mapmenu .map .activity{margin-top:25px;}
+#store_main .mapmenu .map .activity .center{margin:0px 54px;}
+#store_main .mapmenu .map .activity a{display:block;width:221px;height:69px;background:#cfcbcb;text-align:center;float:left;font-size:28.14px;color:#333;line-height:69px;border-radius:11px;}
+#store_main  #dituContent{width:773px;height:471px;}
+#store_main  #dituContent .anchorBL{display:none;}
