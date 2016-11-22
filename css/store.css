@@ -13,7 +13,8 @@
 #store_main .storelist .list .item img{float:left;}
 #store_main .storelist .list .item .text{float:left;margin-left:18px;}
 #store_main .storelist .list .item .text p{height:24px;line-height:24px;}
-#store_main .storelist .list .item .text a{height:25px;line-height:25px;text-align:center;border:1px solid #c30d23;display:block;margin:24px 0px 0px 39px;}
+#store_main .storelist .list .item .text a{height:25px;line-height:25px;text-align:center;border:1px solid #c30d23;display:block;margin:24px 0px 0px 39px;transition:all 1s;}
+#store_main .storelist .list .item .text a:hover{background:#c30d23;color:#fff;}
 #store_main .storelist{margin-right:34px;}
 #store_main .mapmenu{padding:0px 43px;margin-top:14px;}
 #store_main .mapmenu p{line-height:62px;height:62px;}

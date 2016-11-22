@@ -16,12 +16,12 @@ html body #header .navover{color:#fff;background:#c30d23;}
 #top ul .qr{cursor:pointer;}
 #top ul .img{display:none;position:absolute;right:-20px;top:50px;}
 #top .logo{width:200px;height:158px;border-radius:13px;background:#fff;position:absolute;top:-22px;}
-#top .logo img{position:absolute;bottom:25px;left:16px;width:179px;height:38px;}
+#top .logo img{position:absolute;bottom:25px;width:179px;height:38px;left:10px;}
 #top .nav a{margin-top:50px;display:block;color:#333;width:115px;height:35px;line-height:35px;background:#fff;text-align:center;border-radius:10px;font-size:20px;}
 #top .nav a:hover{color:#fff;background:#c30d23;}
 #top .nav li{margin-left:9px;}
 /*main区域*/
-#main .auto img{display:block;width:812px;margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;}
+#main .auto .text{display:block;width:812px;margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;}
 /*footer区域*/
 #index #footer{height:207px;width:100%;color:#fff;position:absolute;bottom:0;}
 #footer{height:207px;width:100%;}
