@@ -1,5 +1,9 @@
 
 $(function(){
+    //logo滑出
+    $("#top .logo ").delay(500).slideDown();
+    //主页的图片
+    $("#main .auto .text").delay(1000).animate({opacity:1});
     //官方微信二维码
     $(".qr").on({mouseover:function(){
         $(".img").slideDown();
@@ -18,7 +22,6 @@ $(function(){
         url:"data/news.json",
         dataType: "json",
         success:function(data){
-
             var content=$(".newsjson");
             //请求所有的新闻 并添加到页面当中
             for(var i=0;i<data.length;i++){
