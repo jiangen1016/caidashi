@@ -4,10 +4,31 @@ a{text-decoration: none}
 .clear:after {content: "";display: block;height: 0;clear: both;}
 .clear {zoom: 1;}li{list-style: none;color:#fff;float:left;}
 input{outline:none}
-body{background:url(../images/bg.jpg);background-size:cover;font-family:"微软雅黑","宋体";font-size:14px;}
+
+
+body{
+    font-family:"微软雅黑","宋体";font-size:14px;
+    background: url("../images/bg0.jpg")  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 1s;
+}
 html body #header .navover{color:#fff;background:#c30d23;}
 /*顶部区域*/
 #header{height:136px;}
+body #header .navover{color:#fff;background:#c30d23;}
+
+.btn{width:80px;height:60px;background:#cfcbcb;text-align:center;line-height:60px;position:absolute;top:50%;margin-top:-30px;font-size:30px;opacity:.4;cursor:pointer;}
+.btn:hover{background:rgba(0,0,0,.8);color:#fff;}
+.btn1{left:1%;text-align:left;}
+.btn2{right:1%;text-align:right;}
 
 #top {height:50px;line-height:50px;background:rgba(0,0,0,0.3);font-size:14px;}
 #top ul{float:right;}
@@ -25,7 +46,7 @@ html body #header .navover{color:#fff;background:#c30d23;}
 #main .auto .text{display:block;width:812px;margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0; }
 /*footer区域*/
 #index #footer{height:207px;width:100%;color:#fff;position:absolute;bottom:0;}
-#main .auto .left ul li:hover{background:#e00d27;padding:0px 60px 0px 55px;}
+#main .auto .left ul .lili:hover{background:#e00d27;padding:0px 60px 0px 55px;}
 #footer{height:207px;width:100%;}
 #footer .footer_top{height:168px;background:rgba(0,0,0,0.3);}
 #footer .footer_top .dllist{margin-left:210px;}

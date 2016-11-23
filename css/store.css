@@ -1,8 +1,11 @@
 #store_main .auto{width:1200px;height:805px;background:#fff;margin-top:38px;border-radius:10px;}
 #store_main .city{height:129px;border-bottom:1px dashed #000; }
-#store_main .city .citytop{line-height:35px;height:35px;padding-top:20px;margin-bottom:8px;}
+#store_main .city .citytop{line-height:35px;height:35px;padding-top:20px;margin-bottom:8px;width:200px;position:relative;}
 #store_main .city .left{margin-left:90px;}
-#store_main .city .citytop a{color:#c30d23;margin-left:18px;text-decoration: underline}
+#store_main .city .citytop a{color:#c30d23;margin-left:18px;text-decoration: underline;}
+#store_main .city .citytop .citys{border:1px solid #000;border-radius:5px;padding:5px;background:#fff;width:100px;z-index:10;position:absolute;right:-35px;display:none;}
+#store_main .city .citytop .citys li{height:30px;float:none;color:#000;text-align:center;cursor:pointer;}
+#store_main .city .citytop .citys li:hover{background:#9f9f9f;}
 #store_main .city .cityform{float:left;line-height:35px;height:35px;}
 #store_main .city .cityform input{border:none;}
 #store_main .city .cityform .text{width:280px;padding:0px 20px;height:33px;line-height:33px;border-radius:7px;border:1px solid #000;}
@@ -22,6 +25,6 @@
 #store_main .mapmenu .map{float:left;}
 #store_main .mapmenu .map .activity{margin-top:25px;}
 #store_main .mapmenu .map .activity .center{margin:0px 54px;}
-#store_main .mapmenu .map .activity a{display:block;width:221px;height:69px;background:#cfcbcb;text-align:center;float:left;font-size:28.14px;color:#333;line-height:69px;border-radius:11px;}
+#store_main .mapmenu .map .activity a{display:block;width:221px;height:69px;background:#c30d23;text-align:center;float:left;font-size:24px;color:#fff;line-height:69px;border-radius:11px;}
 #store_main  #dituContent{width:773px;height:471px;}
 #store_main  #dituContent .anchorBL{display:none;}

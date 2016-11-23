@@ -1,22 +1,68 @@
 
 $(function(){
-    //logo滑出
-    $("#top .logo ").delay(500).slideDown();
-    //主页的图片
-    $("#main .auto .text").delay(1000).animate({opacity:1});
-    //官方微信二维码
-    $(".qr").on({mouseover:function(){
-        $(".img").slideDown();
-        return false;
-    },mouseout:function(){
-        $(".img").slideUp();
-        return false;
-    }});
-    //品牌加盟列表点击事件
-    $("#main ul li[class!=empty]").on("click",function(){
-        $(this).addClass("active").siblings().removeClass("active");
-    });
-    //新闻中心 new分页
+    //主页背景图
+    (function bgimgauto(){
+        var timer=null;
+        var img=["images/bg0.jpg","images/bg1.jpg","images/bg2.jpg"];
+        var index = 0;
+        $(".btn1").on("click",function(){
+            index<=0 ? index=2 : index--;
+            $(".background").css("backgroundImage","url("+img[index]+")");
+            console.log(index);
+        });
+        $(".btn2").on("click",function(){
+            index>=2  ? index=0 : index++;
+            $(".background").css("backgroundImage","url("+img[index]+")");
+            console.log(index);
+        });
+        function back () {
+            index++;
+            index <= 0 ? index = 2 : index--;
+            index >= 2 ? index = 0 : index++;
+            $(".background").css("backgroundImage", "url(" + img[index] + ")");
+        }
+        timer=setInterval(back,5000);
+    })();
+    (function imganimate(){
+       //logo滑出
+       $("#top .logo ").delay(500).slideDown();
+       //主页的图片
+       $("#main .auto .text").delay(1000).animate({opacity:1});
+       //官方微信二维码
+       $(".qr").on({mouseover:function(){
+           $(".img").slideDown();
+           return false;
+       },mouseout:function(){
+           $(".img").slideUp();
+           return false;
+       }});
+   })();
+    //切换城市
+    (function citychange(){
+       $(".citytop a").on("click",function(){
+           $(".citytop .citys").slideDown();
+           return false;
+       });
+       $(".citytop .citys li").on("click",function(){
+           $(".citytop span").html($(this).html());
+           $(this).parent().hide();
+       });
+   })();
+    //菜单列表滑动事件
+    (function listmouseover(){
+        var oLi=$("#main ul .li");
+        var oLitext=$("#main .auto .right .right_t");
+        var oLine=$("#main ul li[class=line]");
+        oLi.attr("index","60"*$(this).index()).on("mouseover",function(){
+            var num=$(this).index();
+            $(this).siblings(".line").css("top",((num-1)*50+25)+"px");
+            oLitext.eq(num).addClass("show").siblings().removeClass("show");
+        }).on("mouseover",function() {
+            oLine.css("top","attr('index')");
+        })
+    })();
+
+    //新闻中心数据请求
     $.ajax({
         type:"GET",
         url:"data/news.json",
@@ -40,5 +86,5 @@ $(function(){
             }
         }
     })
-});
+})
 

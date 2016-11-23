@@ -1,10 +1,15 @@
-#main .auto .left ul .active{background:#e00d27;padding:0px 60px 0px 55px;}
+
+#main .auto .left ul .line{background:#e00d27;padding:0px 60px 0px 55px;}
 #main .auto{width:1200px;height:805px;background:#fff;margin-top:38px;border-radius:10px;overflow: hidden}
 #main .auto .left{float:left;}
 #main .auto .right{float:left;margin:0px 50px;width:900px;position:relative;}
 #main .auto>div{padding-top:52px;}
-#main .auto .left ul li{height:60px;line-height:60px;float:none;width:83px;padding:0px 55px 0px;background:#c30d23;font-size:20px;cursor:pointer;}
+#main .auto .left ul{position:relative;z-index:1;background:#c30d23;}
+#main .auto .left ul .line{position:absolute;z-index:2;top:25px;transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1)}
+#main .auto .left ul li{z-index:3;position:relative;height:50px;line-height:50px;float:none;width:74px;padding:0px 55px 0px;font-size:18px;cursor:pointer;}
 #main .auto .left ul .empty{height:26px;line-height:26px;}
+#main .auto .right .right_t{display:none;}
+#main .auto .right .show{display:block;}
 #main .auto .right p{height:30px;line-height:30px;}
 #main .auto .right h2{text-align:center;}
 
@@ -16,8 +21,8 @@ html #main .auto .right .rr .rightext h3{text-align: right;}
 #main .auto .right .paging{position: absolute;right:0px;bottom:-40px;}
 #main .auto .right .item img{width:240px;height:170px;float:left;}
 #main .auto .right .item .rightext{float:left;width:510px;height:170px;margin-left:75px;}
-#main .auto .right .item .rightext h3{height:60px;line-height:60px;}
+#main .auto .right .item .rightext h3{height:60px;line-height:60px;font-size:20px;}
 #main .auto .right .item .rightext p{height:30px;line-height:30px;}
 #main .auto .right  .paging .page{margin-left:15px;}
 #main .auto .right  .paging .number{margin-right:15px;}
-#main .auto .right  .paging .button{border:1px solid #333;cursor:pointer;padding:0px 5px;border-radius:3px;}
+#main .auto .right  .paging .button{cursor:pointer;padding:5px 10px;border-radius:3px;color:#fff;background:#c30d23;}
