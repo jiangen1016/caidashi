@@ -1,31 +1,44 @@
 
 $(function(){
+
     //主页背景图
     (function bgimgauto(){
         var timer=null;
-        var img=["images/bg0.jpg","images/bg1.jpg","images/bg2.jpg"];
         var index = 0;
+        console.log(index)
         $(".btn1").on("click",function(){
-            index<=0 ? index=2 : index--;
-            $(".background").css("backgroundImage","url("+img[index]+")");
+            //if(index<=0){
+            //    index=3
+            //}else{
+            index<=0 ? index=2 :  index--;
+           // }
+
+            change(index);
             console.log(index);
         });
         $(".btn2").on("click",function(){
-            index>=2  ? index=0 : index++;
-            $(".background").css("backgroundImage","url("+img[index]+")");
-            console.log(index);
+            //if(index>2){
+            //    index=0;
+            //}else{
+            index>=2 ? index=0 : index++;
+            //}
+            change(index);
+            console.log(index)
         });
-        function back () {
-            index++;
-            index <= 0 ? index = 2 : index--;
-            index >= 2 ? index = 0 : index++;
-            $(".background").css("backgroundImage", "url(" + img[index] + ")");
+        //改变body背景图
+        function change(index){
+            $(".img").find("img").eq(index+1).addClass("nohi").siblings("img").removeClass("nohi")
         }
-        timer=setInterval(back,5000);
+        //function back () {
+        //    index <= 0 ? index = 2 : index--;
+        //    index >= 2 ? index = 0 : index++;
+        //    change(index);
+        //}
+
     })();
     (function imganimate(){
        //logo滑出
-       $("#top .logo ").delay(500).slideDown();
+       $("#top .logo").delay(500).slideDown();
        //主页的图片
        $("#main .auto .text").delay(1000).animate({opacity:1});
        //官方微信二维码
@@ -56,7 +69,7 @@ $(function(){
         oLi.attr("index","60"*$(this).index()).on("mouseover",function(){
             var num=$(this).index();
             $(this).siblings(".line").css("top",((num-1)*50+25)+"px");
-            oLitext.eq(num).addClass("show").siblings().removeClass("show");
+            oLitext.eq(num-1).addClass("show").siblings().removeClass("show");
         }).on("mouseover",function() {
             oLine.css("top","attr('index')");
         })
@@ -75,7 +88,8 @@ $(function(){
                 var div=$("<div class='item clear'></div>");
                 var title=$("<h3></h3>").text(data[i].title);
                 var text=$("<p></p>").text(data[i].text);
-                var right=$("<div class='rightext'></div>").append(title,text);
+                var timer=$("<span></span>").text(data[i].date);
+                var right=$("<div class='rightext'></div>").append(title,text,timer);
                 var img=$("<img />").attr("src",data[i].img);
                 //右边浮动的样式
                 if(i%3==1){

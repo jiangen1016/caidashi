@@ -1,6 +1,9 @@
 
 #main .auto .left ul .line{background:#e00d27;padding:0px 60px 0px 55px;}
 #main .auto{width:1200px;height:805px;background:#fff;margin-top:38px;border-radius:10px;overflow: hidden}
+#main .auto .info{padding:38px 140px;}
+#main .auto .info h2{text-align:center;line-height:82px;height:82px;}
+#main .auto .info p{line-height:30px;}
 #main .auto .left{float:left;}
 #main .auto .right{float:left;margin:0px 50px;width:900px;position:relative;}
 #main .auto>div{padding-top:52px;}
@@ -18,11 +21,12 @@ html #main .auto .right .rr img{float:right;}
 html #main .auto .right .rr .rightext{float:right;margin-right:75px;}
 html #main .auto .right .rr .rightext h3{text-align: right;}
 
-#main .auto .right .paging{position: absolute;right:0px;bottom:-40px;}
+#main .auto .right .paging{position: absolute;right:0px;bottom:-70px;}
 #main .auto .right .item img{width:240px;height:170px;float:left;}
 #main .auto .right .item .rightext{float:left;width:510px;height:170px;margin-left:75px;}
 #main .auto .right .item .rightext h3{height:60px;line-height:60px;font-size:20px;}
 #main .auto .right .item .rightext p{height:30px;line-height:30px;}
+#main .auto .right .item .rightext span{float:right;display:block;margin-top: 65px;}
 #main .auto .right  .paging .page{margin-left:15px;}
 #main .auto .right  .paging .number{margin-right:15px;}
 #main .auto .right  .paging .button{cursor:pointer;padding:5px 10px;border-radius:3px;color:#fff;background:#c30d23;}

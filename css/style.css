@@ -5,7 +5,25 @@ a{text-decoration: none}
 .clear {zoom: 1;}li{list-style: none;color:#fff;float:left;}
 input{outline:none}
 
+.img .nohi{display:block;width:100%;height:100%;}
+.img{position:absolute;top:0;z-index:1;width:100%;height:100%;}
+.img img{font-size:0;display:none;}
 
+.bodyimg{animation: haha 1s}
+
+@keyframes haha {
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.none{background:none;}
+.background{
+    -webkit-transition:all 3s linear ;
+    -moz-transition: all 3s linear ;
+    -ms-transition:all 3s linear;
+    -o-transition:all 3s linear;
+    }
 body{
     font-family:"微软雅黑","宋体";font-size:14px;
     background: url("../images/bg0.jpg")  no-repeat center center fixed;
@@ -18,14 +36,13 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-    transition: all 1s;
 }
 html body #header .navover{color:#fff;background:#c30d23;}
 /*顶部区域*/
-#header{height:136px;}
+#header{height:136px;position:relative;z-index:3;}
 body #header .navover{color:#fff;background:#c30d23;}
 
-.btn{width:80px;height:60px;background:#cfcbcb;text-align:center;line-height:60px;position:absolute;top:50%;margin-top:-30px;font-size:30px;opacity:.4;cursor:pointer;}
+.btn{z-index:5;width:80px;height:60px;background:#cfcbcb;text-align:center;line-height:60px;position:absolute;top:50%;margin-top:-30px;font-size:30px;opacity:.4;cursor:pointer;}
 .btn:hover{background:rgba(0,0,0,.8);color:#fff;}
 .btn1{left:1%;text-align:left;}
 .btn2{right:1%;text-align:right;}
@@ -43,11 +60,11 @@ body #header .navover{color:#fff;background:#c30d23;}
 #top .nav a:hover{color:#fff;background:#c30d23;}
 #top .nav li{margin-left:9px;}
 /*main区域*/
-#main .auto .text{display:block;width:812px;margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0; }
+#main .auto .text{display:block;width:812px;margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0; z-index:3;}
 /*footer区域*/
 #index #footer{height:207px;width:100%;color:#fff;position:absolute;bottom:0;}
 #main .auto .left ul .lili:hover{background:#e00d27;padding:0px 60px 0px 55px;}
-#footer{height:207px;width:100%;}
+#footer{height:207px;width:100%;position:relative;z-index:3;}
 #footer .footer_top{height:168px;background:rgba(0,0,0,0.3);}
 #footer .footer_top .dllist{margin-left:210px;}
 #footer .footer_top dl{float:left;margin-top:14px;margin-right:67px;}
