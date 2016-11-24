@@ -5,36 +5,22 @@ $(function(){
     (function bgimgauto(){
         var timer=null;
         var index = 0;
-        console.log(index)
+        console.log(index);
         $(".btn1").on("click",function(){
-            //if(index<=0){
-            //    index=3
-            //}else{
-            index<=0 ? index=2 :  index--;
-           // }
-
+             index <=0 ?  index=2 : index--;
             change(index);
-            console.log(index);
+
         });
         $(".btn2").on("click",function(){
-            //if(index>2){
-            //    index=0;
-            //}else{
-            index>=2 ? index=0 : index++;
-            //}
+            index >1 ? index=-1 : index++;
             change(index);
-            console.log(index)
+
         });
         //改变body背景图
         function change(index){
-            $(".img").find("img").eq(index+1).addClass("nohi").siblings("img").removeClass("nohi")
+            console.log(index);
+            $(".img").find("img").eq(index).animate({opacity:0},1500).next().animate({opacity:1},1500)
         }
-        //function back () {
-        //    index <= 0 ? index = 2 : index--;
-        //    index >= 2 ? index = 0 : index++;
-        //    change(index);
-        //}
-
     })();
     (function imganimate(){
        //logo滑出
@@ -43,10 +29,10 @@ $(function(){
        $("#main .auto .text").delay(1000).animate({opacity:1});
        //官方微信二维码
        $(".qr").on({mouseover:function(){
-           $(".img").slideDown();
+           $(".imgqr").slideDown();
            return false;
        },mouseout:function(){
-           $(".img").slideUp();
+           $(".imgqr").slideUp();
            return false;
        }});
    })();

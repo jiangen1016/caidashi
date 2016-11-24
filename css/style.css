@@ -7,15 +7,9 @@ input{outline:none}
 
 .img .nohi{display:block;width:100%;height:100%;}
 .img{position:absolute;top:0;z-index:1;width:100%;height:100%;}
-.img img{font-size:0;display:none;}
+.img img{font-size:0;opacity:0;filter:alpha(opacity=0);width:100%;height:100%;position:absolute;}
 
 .bodyimg{animation: haha 1s}
-
-@keyframes haha {
-    0%{opacity:1;}
-    50%{opacity:0;}
-    100%{opacity:1;}
-}
 
 .none{background:none;}
 .background{
@@ -42,10 +36,9 @@ html body #header .navover{color:#fff;background:#c30d23;}
 #header{height:136px;position:relative;z-index:3;}
 body #header .navover{color:#fff;background:#c30d23;}
 
-.btn{z-index:5;width:80px;height:60px;background:#cfcbcb;text-align:center;line-height:60px;position:absolute;top:50%;margin-top:-30px;font-size:30px;opacity:.4;cursor:pointer;}
-.btn:hover{background:rgba(0,0,0,.8);color:#fff;}
-.btn1{left:1%;text-align:left;}
-.btn2{right:1%;text-align:right;}
+.btn{z-index:5;width:80px;height:50px;background:#cfcbcb;text-align:center;position:absolute;top:50%;margin-top:-30px;font-size:30px;opacity:.4;cursor:pointer;}
+.btn1{left:1%;text-align:left;background:url(../images/left_ar.png) no-repeat center;}
+.btn2{right:1%;text-align:right;background:url(../images/right_ar.png) no-repeat center;}
 
 #top {height:50px;line-height:50px;background:rgba(0,0,0,0.3);font-size:14px;}
 #top ul{float:right;}
@@ -53,7 +46,7 @@ body #header .navover{color:#fff;background:#c30d23;}
 #top ul li{float:left;margin-left:15px;}
 #top .wechat{position:relative;}
 #top ul .qr{cursor:pointer;}
-#top ul .img{display:none;position:absolute;right:-20px;top:50px;}
+#top ul .imgqr{display:none;position:absolute;right:-20px;top:50px;}
 #top .logo{width:200px;height:158px;border-radius:13px;background:#fff;position:absolute;top:-22px;display:none;}
 #top .logo img{position:absolute;bottom:25px;width:179px;height:38px;left:10px;}
 #top .nav a{margin-top:50px;display:block;color:#333;width:115px;height:35px;line-height:35px;background:#fff;text-align:center;border-radius:10px;font-size:20px;}
